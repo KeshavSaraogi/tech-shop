@@ -1,0 +1,31 @@
+{
+  "name": "tech-shop",
+  "version": "1.0.0",
+  "description": "E-Commerce MERN Web App",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \" npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KeshavSaraogi/tech-shop.git"
+  },
+  "author": "Keshav Saraogi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KeshavSaraogi/tech-shop/issues"
+  },
+  "homepage": "https://github.com/KeshavSaraogi/tech-shop#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  }
+}
