@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import './assets/styles/bootstrap.custom.css';
+import './assets/styles/bootstrap.custom.css';
 import './assets/styles/index.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
@@ -46,7 +47,7 @@ const router = createBrowserRouter(
       <Route path='/cart' element={<CartScreen />} />
       <Route path='/login' element={<LoginScreen />} />
       <Route path='/register' element={<RegisterScreen />} />
-
+      {/* Registered users */}
       <Route path='' element={<PrivateRoute />}>
         <Route path='/shipping' element={<ShippingScreen />} />
         <Route path='/payment' element={<PaymentScreen />} />
@@ -54,7 +55,7 @@ const router = createBrowserRouter(
         <Route path='/order/:id' element={<OrderScreen />} />
         <Route path='/profile' element={<ProfileScreen />} />
       </Route>
-
+      {/* Admin users */}
       <Route path='' element={<AdminRoute />}>
         <Route path='/admin/orderlist' element={<OrderListScreen />} />
         <Route path='/admin/productlist' element={<ProductListScreen />} />
