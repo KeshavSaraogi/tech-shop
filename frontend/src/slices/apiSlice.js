@@ -8,12 +8,12 @@ const baseQuery = fetchBaseQuery({
 });
 
 async function baseQueryWithAuth(args, api, extra) {
-  const result = await baseQuery(args, api, extra);
+  let result = await baseQuery(args, api, extra);
   if (result.error && result.error.status === 401) {
     api.dispatch(logout());
   }
   return result;
-}
+};
 
 export const apiSlice = createApi({
   baseQuery: baseQueryWithAuth,
